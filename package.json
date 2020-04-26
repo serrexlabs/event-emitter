@@ -1,0 +1,45 @@
+{
+  "name": "events",
+  "version": "0.1.1",
+  "description": "A simple event and interceptable emitter with zero dependency",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --config jestconfig.json",
+    "build": "tsc",
+    "lint": "eslint src/**/*.{ts,js} --quiet --fix",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run lint && git add -A src"
+  },
+  "keywords": [
+    "events",
+    "simple events",
+    "events middleware",
+    "emitter"
+  ],
+  "author": "Sanath Samarasinghe",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.4",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.2.7",
+    "prettier": "^2.0.2",
+    "ts-jest": "^25.3.1",
+    "typescript": "^3.8.3"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/serrexlabs/graphqlc.git"
+  },
+  "homepage": "https://github.com/serrexlabs/graphqlc"
+}
